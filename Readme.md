@@ -1,7 +1,6 @@
-Here is a comprehensive and professional `README.md` file tailored to your project. It translates your feature list into clear technical documentation, specifically explaining the AWS services and architectural patterns used.
+Here’s your updated `README.md` content with sections for an **architecture diagram** and a **sample output image** added:
 
------
-
+````markdown
 # AWS Bedrock GenAI Workshop
 
 ## 📖 Project Overview
@@ -9,6 +8,18 @@ Here is a comprehensive and professional `README.md` file tailored to your proje
 This repository contains a comprehensive, hands-on workshop designed to teach developers how to build production-grade Generative AI applications using **Amazon Bedrock**.
 
 The project is structured as a progressive learning path. It provides a "Concept-to-Code" experience where students can experiment with Foundation Models (FMs), implement Retrieval-Augmented Generation (RAG), generate and manipulate images, and build autonomous agents.
+
+---
+
+## 🧭 Architecture Overview
+
+The following diagram illustrates the high-level architecture of the workshop application, including the interaction between the frontend, AWS Bedrock, vector stores, and supporting services.
+
+> 🔧 **Note:** Replace the file path below with your actual architecture image path (for example: `docs/architecture.png`).
+
+![AWS Bedrock GenAI Workshop Architecture](docs/architecture-diagram.png)
+
+---
 
 ## 🏗 Project Structure
 
@@ -18,18 +29,20 @@ The repository is organized to support both self-paced learning and instructor-l
   * **📂 `completed/`**: Fully functional reference implementations of all features. Use this to check your work or see the final solution.
   * **📂 `data/`**: specialized datasets, PDF documents for RAG, and sample CSV/JSON files used for labs.
 
+---
+
 ## 🚀 Features & AWS Services Used
 
 This project leverages the **AWS Bedrock API** via the `boto3` SDK. Below is a detailed breakdown of how each feature maps to specific AWS services and models.
 
-### 1\. 💬 Conversational Chatbot
+### 1. 💬 Conversational Chatbot
 
   * **Functionality:** A streaming chat interface capable of maintaining context and handling natural language queries.
   * **AWS Service:** **Amazon Bedrock Runtime (InvokeModelWithResponseStream)**.
   * **Models Used:**
       * **Anthropic Claude 3 (Sonnet/Haiku)** or **Amazon Titan Text**: Selected for their high reasoning capabilities and context window handling.
 
-### 2\. 📚 RAG (Retrieval-Augmented Generation)
+### 2. 📚 RAG (Retrieval-Augmented Generation)
 
   * **Functionality:** Allows the AI to answer questions based on specific external documents (PDFs/Text) rather than just its training data.
   * **AWS Service:** **Amazon Bedrock Embeddings** & **Vector Stores**.
@@ -38,7 +51,7 @@ This project leverages the **AWS Bedrock API** via the `boto3` SDK. Below is a d
       * **Vector Database:** Uses **FAISS** or **ChromaDB** (local vector stores) to index and search document chunks.
       * **Orchestration:** Retrieves relevant chunks based on semantic similarity and feeds them into the LLM context window.
 
-### 3\. 🎨 Image Generation & Manipulation
+### 3. 🎨 Image Generation & Manipulation
 
   * **Functionality:** A suite of tools to generate new images or surgically alter existing ones (inpainting, outpainting, background removal).
   * **AWS Service:** **Amazon Bedrock Image Generation APIs**.
@@ -50,7 +63,7 @@ This project leverages the **AWS Bedrock API** via the `boto3` SDK. Below is a d
       * **Outpainting:** Extending an image beyond its original borders.
       * **Variation:** Creating stylistic variations of an input image using image-to-image techniques.
 
-### 4\. 🛡️ Guardrails & Safety
+### 4. 🛡️ Guardrails & Safety
 
   * **Functionality:** Enforces safety policies to prevent the AI from generating harmful content, PII (Personally Identifiable Information), or discussing restricted topics.
   * **AWS Service:** **Amazon Bedrock Guardrails**.
@@ -59,7 +72,7 @@ This project leverages the **AWS Bedrock API** via the `boto3` SDK. Below is a d
       * **PII Redaction:** Automatically detects and masks sensitive data like emails or SSNs.
       * **Denied Topics:** Custom rules configured to refuse answering questions about specific off-limits competitors or topics.
 
-### 5\. 🤖 Agents & Tool Use
+### 5. 🤖 Agents & Tool Use
 
   * **Functionality:** Autonomous agents that can break down complex user requests and "call" external tools or APIs to complete tasks.
   * **AWS Service:** **Amazon Bedrock Agents**.
@@ -67,10 +80,12 @@ This project leverages the **AWS Bedrock API** via the `boto3` SDK. Below is a d
       * Uses LLM reasoning to determine when to execute a Python function (e.g., "GetWeather", "QueryDatabase").
       * Parses structured data (JSON) from the model to execute backend logic.
 
-### 6\. 📊 Structured Data Extraction (CSV/JSON)
+### 6. 📊 Structured Data Extraction (CSV/JSON)
 
   * **Functionality:** Extracting specific fields from unstructured text and formatting them into usable JSON or CSV output.
   * **Technique:** Prompt Engineering coupled with **Anthropic Claude's** strong instruction-following capabilities to enforce output schemas.
+
+---
 
 ## 🛠 Technology Stack
 
@@ -80,46 +95,60 @@ This project leverages the **AWS Bedrock API** via the `boto3` SDK. Below is a d
   * **Vector DB:** FAISS / ChromaDB - For local vector storage and semantic search.
   * **Data Handling:** Pandas (for CSV), PyPDF2 (for document parsing).
 
+---
+
 ## ⚙️ Prerequisites
 
 Before running the labs, ensure you have the following:
 
-1.  **AWS Account** with active subscription.
-2.  **Bedrock Model Access**: Go to the AWS Console -\> Bedrock -\> Model Access and enable:
+1. **AWS Account** with active subscription.
+2. **Bedrock Model Access**: Go to the AWS Console → Bedrock → Model Access and enable:
       * Anthropic Claude 3
       * Amazon Titan Text & Embeddings
       * Stable Diffusion XL
-3.  **AWS Credentials**: Configured locally via AWS CLI (`aws configure`) or environment variables.
+3. **AWS Credentials**: Configured locally via AWS CLI (`aws configure`) or environment variables.
+
+---
 
 ## 📦 Installation & Setup
 
-1.  **Clone the repository:**
+1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-repo/Building Generative AI Applications with AWS Bedrock.git
+    git clone https://github.com/your-repo/Building-Generative-AI--Applications-with--AWS-Bedrock.git
     cd bedrock-workshop
     ```
 
-2.  **Create a Virtual Environment:**
+2. **Create a Virtual Environment:**
 
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
-3.  **Install Dependencies:**
+3. **Install Dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Run the Application:**
-    Navigate to the `completed` folder to see the final app, or `labs` to start building.
+4. **Run the Application:**
+
+   Navigate to the `completed` folder to see the final app, or `labs` to start building.
 
     ```bash
     streamlit run Home.py
     ```
 
-## 📝 License
+---
 
-Th
+## 📸 Sample Output
+
+Below is an example of the workshop UI and model output in action (for example: chatbot, RAG response, or image generation result).
+
+> 🔧 **Note:** Replace the file path below with your actual screenshot (for example: `docs/sample-output.png`).
+
+![Sample Application Output](docs/sample-output.png)
+````
+
+
