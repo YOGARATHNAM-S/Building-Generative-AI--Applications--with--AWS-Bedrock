@@ -1,6 +1,3 @@
-Here’s your updated `README.md` content with sections for an **architecture diagram** and a **sample output image** added:
-
-````markdown
 # AWS Bedrock GenAI Workshop
 
 ## 📖 Project Overview
@@ -15,9 +12,8 @@ The project is structured as a progressive learning path. It provides a "Concept
 
 The following diagram illustrates the high-level architecture of the workshop application, including the interaction between the frontend, AWS Bedrock, vector stores, and supporting services.
 
-> 🔧 **Note:** Replace the file path below with your actual architecture image path (for example: `docs/architecture.png`).
 
-![AWS Bedrock GenAI Workshop Architecture](docs/architecture-diagram.png)
+![AWS Bedrock GenAI Workshop Architecture](/assets/architecture.png)
 
 ---
 
@@ -115,8 +111,8 @@ Before running the labs, ensure you have the following:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-repo/Building-Generative-AI--Applications-with--AWS-Bedrock.git
-    cd bedrock-workshop
+    git clone https://github.com/your-repo/Building-Generative-AI-Applications-with-AWS-Bedrock.git
+    cd modules
     ```
 
 2. **Create a Virtual Environment:**
@@ -146,9 +142,22 @@ Before running the labs, ensure you have the following:
 
 Below is an example of the workshop UI and model output in action (for example: chatbot, RAG response, or image generation result).
 
-> 🔧 **Note:** Replace the file path below with your actual screenshot (for example: `docs/sample-output.png`).
+---
+![Sample Application Output](/assets/app-in-use.png)
+---
 
-![Sample Application Output](docs/sample-output.png)
-````
+---
+![Sample Application Output](assets/app-in-use2.png)
+---
 
+---
+![Sample Application Output](/assets/app-in-use1.png)
+---
 
+---
+![Sample Application Output](/assets/app-in-use3.png)
+---
+
+---
+![Sample Application Output](/assets/app-in-use4.png)
+---
